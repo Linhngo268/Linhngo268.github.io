@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+ 
+* {
+    box-sizing: border-box;}
+
+body{
+      
+      
+     
+     
+    background-color: black;;
+     background-repeat: no-repeat;
+     background-size: cover;
+      
+     background-position: center center;
+     height: 100vh;
+     font-family:cursive;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     
+     text-align: center;
+     margin: 0;
+     overflow: hidden;
+
+
+}
+
+button {
+	background-color: rebeccapurple;
+	border-radius: 3px;
+	box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.15);
+	border: none;
+	color: white;
+	cursor: pointer;
+	padding: 1rem 2rem;
+	 
+	position: relative;
+	top: 200px;
+	transition: transform 0.1s linear, box-shadow 0.1s linear;
+	z-index: 100;
+}
+ 
+ 
+
+button:active {
+	transform: translate(4px, 4px);
+	box-shadow: 0 0 0 rebeccapurple;
+}
+
+button:focus {
+	outline: none;
+}
+
+.particle {
+	--x: 0;
+	--y: 0;
+	background-color: rebeccapurple;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 5px;
+	width: 5px;
+	z-index: -1;
+}
+
+.particle.move {
+	animation: move 1000ms linear forwards;
+}
+
+@keyframes move {
+	to {
+		transform: translate(var(--x), var(--y));
+	}
+	
+	95% {
+		opacity: 1;
+	}
+	
+	100% {
+		opacity: 0;
+	}
+}
+h1 {
+    font-weight: normal;
+    font-size: 60px;
+     margin: -150px 50 40px;
+	 color:white;
+}
+.countdown{
+     display: flex;
+     transform: scale(2);
+ }
+ .time {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 15px;
+color:aliceblue;
+
+ }
+ .time h2{
+
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1;
+ }
+ .back-video{
+	position: absolute;
+	right:0;
+	bottom:0;
+	z-index: -1;
+}
+@media(min-aspect-ratio: 16/9){
+	.back-video{
+		width: 100%;
+		height: auto;
+	}
+}
+@media(max-aspect-ratio){
+	.back-video{
+		width: auto;
+		height:100%;
+	}
+}
