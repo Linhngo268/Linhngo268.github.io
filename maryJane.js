@@ -62,7 +62,7 @@ function randomColor() {
 
 const currentYear= new Date().getFullYear();
  
-const birthday = new Date(currentYear+1, 8, 18, 0,0,0);
+const birthday = new Date(currentYear+1);
 const bornYear = new Date(2001);
 
  function updateCountdown(){
